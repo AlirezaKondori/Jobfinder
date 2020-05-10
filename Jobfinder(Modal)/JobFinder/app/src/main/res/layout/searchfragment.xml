@@ -16,7 +16,7 @@
         android:layout_height="wrap_content" />
 
     <ListView
-        android:onClick="showPopup"
+
         android:id="@+id/list_item"
         android:layout_margin="2dp"
         android:layout_width="match_parent"

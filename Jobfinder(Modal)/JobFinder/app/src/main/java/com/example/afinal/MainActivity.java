@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void openActivity() {
         globalClass.setName(nameInput.getText().toString());
-        password = Integer.valueOf(passwordInput.getText().toString());
+        password = Integer.parseInt(passwordInput.getText().toString());
 
         Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);

@@ -21,7 +21,7 @@ import androidx.annotation.Nullable;
 public class Searchfragment extends Fragment {
 //    private SearchView searchView;
 //    private ListView listView;
-    Dialog myDialog = new Dialog(getContext());
+    myCustomPopup myDialog = new myCustomPopup();
     String[] joblist = {"computer programmer", "Ea gamer", "professional simp", "purple alien", "green alien", "men in black"};
     ArrayAdapter<String> arrayAdapter;
 
@@ -39,7 +39,7 @@ public class Searchfragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//               showPopup(view);
+               showPopup(view);
             }
         });
 
@@ -60,17 +60,17 @@ public class Searchfragment extends Fragment {
         return view;
     }
     public void showPopup(View v) {
-        Button apply;
-        Button close;
-        myDialog.setContentView(R.layout.custompopup);
-        close = (Button) myDialog.findViewById(R.id.close);
-        apply = (Button) myDialog.findViewById(R.id.apply);
-        close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                myDialog.dismiss();
-            }
-        });
-        myDialog.show();
+//        Button apply;
+//        Button close;
+//        myDialog.setContentView(R.layout.custompopup);
+//        close = (Button) myDialog.findViewById(R.id.close);
+//        apply = (Button) myDialog.findViewById(R.id.apply);
+//        close.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                myDialog.dismiss();
+//            }
+//        });
+        myDialog.show(getFragmentManager(), "MyCustomPopup");
     }
 }
