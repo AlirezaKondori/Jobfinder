@@ -18,14 +18,23 @@ import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentManager;
 
 
-public class Searchfragment extends Fragment {
+public class Searchfragment extends Fragment  {
+    int d;
+    public interface OnInputListener{
+        void sendInput(int input);
+    }
+    public OnInputListener onInputListener;
+
 //    private SearchView searchView;
 //    private ListView listView;
     myCustomPopup myDialog = new myCustomPopup();
     String[] joblist = {"computer programmer", "Ea gamer", "professional simp", "purple alien", "green alien", "men in black"};
     String[] wage = {"$13 an hour", "$35000 - $60,000 a year", "$23 an hour", "voulenteer", "$11 an hour", "$15 an hour" };
+    String[] Requirementss = {"Highschool diploma", "Highschool diploma", "Highschool diploma", "Highschool diploma", "Highschool diploma", "Highschool diploma" };
+    String[] note = {"none", "none", "none", "none", "none", "none" };
     MyAdapter adapter;
 
 
@@ -43,6 +52,8 @@ public class Searchfragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                d = position;
                 Log.d("CREATION", String.valueOf(position));
                 switch (position){
                     case 0:
@@ -92,17 +103,10 @@ public class Searchfragment extends Fragment {
         return view;
     }
     public void showPopup(View v) {
-//        Button apply;
-//        Button close;
-//        myDialog.setContentView(R.layout.custompopup);
-//        close = (Button) myDialog.findViewById(R.id.close);
-//        apply = (Button) myDialog.findViewById(R.id.apply);
-//        close.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                myDialog.dismiss();
-//            }
-//        });
+
+
+        onInputListener.sendInput(d);
+
         myDialog.show(getFragmentManager(), "MyCustomPopup");
 
     }
@@ -130,6 +134,16 @@ public class Searchfragment extends Fragment {
             myWage.setText((wage[position]));
 
             return row;
+        }
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        try {
+            onInputListener = (OnInputListener) getActivity();
+        }catch (ClassCastException e) {
+
         }
     }
 }

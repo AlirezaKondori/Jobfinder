@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity  {
 
     BottomNavigationView bottomNavigationView;
 
@@ -19,6 +19,7 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
 
         GlobalClass globalClass = (GlobalClass) getApplicationContext();
         bottomNavigationView = findViewById(R.id.navigationBar);
@@ -47,4 +48,5 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
     }
+
 }
