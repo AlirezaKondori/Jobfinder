@@ -5,7 +5,7 @@
     <application
         android:name=".GlobalClass"
         android:allowBackup="true"
-        android:icon="@drawable/appLogo"
+        android:icon="@drawable/applogo"
         android:label="JobFinder"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
