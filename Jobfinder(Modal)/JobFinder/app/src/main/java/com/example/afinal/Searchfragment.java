@@ -26,7 +26,12 @@ public class Searchfragment extends Fragment  {
     public interface OnInputListener{
         void sendInput(int input);
     }
-    public OnInputListener onInputListener;
+    public OnInputListener onInputListener = new OnInputListener() {
+        @Override
+        public void sendInput(int input) {
+
+        }
+    };
 
 //    private SearchView searchView;
 //    private ListView listView;
@@ -77,14 +82,6 @@ public class Searchfragment extends Fragment  {
                 }
             }
         });
-//        arrayAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,joblist);
-//        listView.setAdapter(arrayAdapter);
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//               showPopup(view);
-//            }
-//        });
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

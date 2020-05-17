@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#fff">
 
     <ImageView
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@color/design_default_color_secondary"
+        android:src="@color/colorPrimary"
         android:id="@+id/iamge"/>
     <LinearLayout
         android:layout_width="match_parent"

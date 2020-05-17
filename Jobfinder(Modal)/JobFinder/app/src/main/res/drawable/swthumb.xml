@@ -13,7 +13,7 @@
             <solid android:color="@color/colorPrimary"/>
             <size android:width="20dp" android:height="8dp"/>
             <corners android:radius="8dp"/>
-            <stroke android:width="2dp" android:color="#000000"/>
+            <stroke android:width="2dp" android:color="@color/colorPrimary"/>
         </shape>
     </item>
 </selector>
