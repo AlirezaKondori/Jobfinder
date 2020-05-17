@@ -9,6 +9,7 @@ import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +56,11 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivity();
+                if (nameInput.getText() == null || passwordInput.getText() == null) {
+                }
+                else {
+                    openActivity();
+                }
             }
         });
     }

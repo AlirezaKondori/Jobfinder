@@ -5,13 +5,15 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="16dp"
-    android:background="#fff">
+    android:background="@drawable/buttonstyle3">
 
     <ImageView
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@color/colorPrimary"
-        android:id="@+id/iamge"/>
+        android:src="@color/Blue"
+        android:id="@+id/iamge"
+        android:background="@drawable/buttonstyle4"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

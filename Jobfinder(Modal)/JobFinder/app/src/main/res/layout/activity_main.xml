@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="250dp"
         android:textSize="25sp"
         android:text="Welcome to JobFnder!"
         android:textColor="#fff"/>
@@ -23,12 +23,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="500dp"
-        android:text="Login" />
+        android:layout_marginTop="550dp"
+        android:text="Login"
+        android:textColor="#fff"
+        android:background="@drawable/buttonstyle2"/>
 
     <EditText
         android:id="@+id/editText"
-        android:background="#fff"
+        android:textColorHint="#c2c5cc"
+        android:textColor="#000"
+        android:background="@drawable/buttonstyle4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -37,7 +41,10 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:background="#fff"
+        android:outlineProvider="background"
+        android:textColor="#000"
+        android:background="@drawable/buttonstyle4"
+        android:textColorHint="#c2c5cc"
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,12 +64,13 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="576dp"
-        android:layout_marginEnd="240dp"
-        android:layout_marginRight="240dp"
+        android:layout_marginEnd="276dp"
+        android:layout_marginRight="276dp"
         android:text="Employer?"
+        android:textColor="#fff"
         android:textOn="yes"
         android:textOff="No"
         android:thumb="@drawable/swthumb"/>
