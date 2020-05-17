@@ -23,7 +23,7 @@ public class myCustomPopup extends DialogFragment implements Searchfragment.OnIn
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         String[] joblist = {"Accountant", "Cashier", "Waiter/waitress", "Image labeling", "Janitor", "office clerk"};
         String[] wage = {"$13 an hour", "$35000 - $60,000 a year", "$23 an hour", "voulenteer", "$11 an hour", "$14.62 an hour" };
-        String[] Requirementss = {"Highschool diploma, Accounting degree", "Highschool diploma", "Highschool diploma", "Highschool diploma", "Highschool diploma", "Highschool diploma," };
+        String[] Requirementss = {"Highschool diploma", "Highschool diploma", "Highschool diploma", "Highschool diploma", "Highschool diploma", "Highschool diploma," };
         String[] note = {"none", "none", "none", "none", "none", "none"};
 
         View view = inflater.inflate(R.layout.custompopup, container, false);
